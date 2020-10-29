@@ -1,12 +1,12 @@
-//importar a sependencia do sqlite3
+//importando a dependencia do sqlite3
 const sqlite3 = require("sqlite3").verbose()
 
-//criar o objeto que irá fazer operações banco de dados
+//criando o objeto que irá fazer operações banco de dados
 const db = new sqlite3.Database("./src/database/database.db")
 module.exports = db
 
 
-//UTILIZAR O OBJET DE BANCO DE DADOS PARA NOSSAS OPERAÇÕES
+//UTILIZANDO O OBJET DE BANCO DE DADOS PARA NOSSAS OPERAÇÕES
 /*db.serialize(() => {
     //criar uma tabela com comando sql
     db.run(`
@@ -22,7 +22,7 @@ module.exports = db
         );
     `)
 
-    //inserir dados na tabela com comandos sql
+    //inserindo dados na tabela com comandos sql
     const query = `
         INSERT INTO places (
             image,
@@ -65,7 +65,7 @@ module.exports = db
     })
 
 
-    //deletar um dado da tabela com comando sql
+    //deletando um dado da tabela com comando sql
     db.run(`DELETE FROM places WHERE id = ?`, [7], function (err) {
         if (err) {
             
